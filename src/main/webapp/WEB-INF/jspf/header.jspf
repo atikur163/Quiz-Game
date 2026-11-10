@@ -1,0 +1,21 @@
+<%-- Shared page header. Each page sets "pageTitle" and declares the JSTL core taglib first. --%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><c:out value="${pageTitle}"/> | <c:out value="${initParam.appTitle}"/></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${ctx}/css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="${ctx}/index.jsp"><c:out value="${initParam.appTitle}"/></a>
+    <nav>
+        <a href="${ctx}/leaderboard">Leaderboard</a>
+    </nav>
+</header>
+<main class="stage">
